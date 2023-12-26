@@ -1,13 +1,13 @@
-package com.example.suitmediakmtest.Screen.secondScreen
+package com.example.suitmediakmtest.screen.secondScreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
+import android.util.Log
 import android.view.View
-import com.example.suitmediakmtest.R
-import com.example.suitmediakmtest.Screen.thirdScreen.UsersListActivity
 import com.example.suitmediakmtest.databinding.ActivitySelectedUserBinding
+import com.example.suitmediakmtest.screen.firstScreen.CheckPalindromeActivity
+import com.example.suitmediakmtest.screen.thirdScreen.UsersListActivity
 
 class SelectedUserActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivitySelectedUserBinding
@@ -20,6 +20,10 @@ class SelectedUserActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.tvUserName.text = intent.getStringExtra(USER_NAME)
 
+        if (!intent.getStringExtra(SELECTED_USER_NAME).isNullOrEmpty()) {
+            binding.tvSelectedUserName.text = intent.getStringExtra(SELECTED_USER_NAME)
+        }
+
         binding.btnBack.setOnClickListener(this)
         binding.btnChoose.setOnClickListener(this)
     }
@@ -30,7 +34,10 @@ class SelectedUserActivity : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
             binding.btnChoose -> {
+                val username = intent.getStringExtra(USER_NAME)
+                Log.d("NAME BTN", username.toString())
                 val intent = Intent(this, UsersListActivity::class.java)
+                intent.putExtra(UsersListActivity.USER_NAME, username)
                 startActivity(intent)
             }
         }
@@ -38,5 +45,6 @@ class SelectedUserActivity : AppCompatActivity(), View.OnClickListener {
 
     companion object {
         const val USER_NAME = "user_name"
+        const val SELECTED_USER_NAME = "selected_user_name"
     }
 }

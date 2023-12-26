@@ -1,13 +1,12 @@
-package com.example.suitmediakmtest.Screen.firstScreen
+package com.example.suitmediakmtest.screen.firstScreen
 
 import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.example.suitmediakmtest.R
-import com.example.suitmediakmtest.Screen.secondScreen.SelectedUserActivity
+import com.example.suitmediakmtest.screen.secondScreen.SelectedUserActivity
 import com.example.suitmediakmtest.databinding.ActivityCheckPalindromeBinding
 
 class CheckPalindromeActivity : AppCompatActivity(), View.OnClickListener {
