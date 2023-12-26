@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.example.suitmediakmtest.databinding.ActivitySelectedUserBinding
-import com.example.suitmediakmtest.screen.firstScreen.CheckPalindromeActivity
 import com.example.suitmediakmtest.screen.thirdScreen.UsersListActivity
 
 class SelectedUserActivity : AppCompatActivity(), View.OnClickListener {

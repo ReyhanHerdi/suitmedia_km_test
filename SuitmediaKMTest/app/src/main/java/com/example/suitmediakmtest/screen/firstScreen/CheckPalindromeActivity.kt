@@ -23,7 +23,7 @@ class CheckPalindromeActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun isPalindrome(): Boolean {
-        val text = binding.edtPalindrome.text.toString().toLowerCase()
+        val text = binding.edtPalindrome.text.toString().lowercase()
         val reversedText = text.reversed()
 
         return text == reversedText

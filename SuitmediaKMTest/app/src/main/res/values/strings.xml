@@ -12,4 +12,6 @@
     <string name="selected_user_name">Selected User Name</string>
     <string name="choose_a_user">Choose a User</string>
     <string name="third_screen">Third Screen</string>
+    <string name="back">back</string>
+    <string name="data_is_empty">Data is empty</string>
 </resources>
